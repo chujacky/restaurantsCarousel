@@ -5,7 +5,6 @@ const app = express();
 const port = 3002;
 
 
-app.use(express.static(path.join(__dirname, '../client/dist')))
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.listen(port, () => {console.log('Server is running')})
-
+app.listen(port, () => { console.log('Server is running'); });
