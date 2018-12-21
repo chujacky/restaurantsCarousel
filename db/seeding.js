@@ -4,12 +4,12 @@ const faker = require('faker');
 
 for (let i = 1; i < 101; i++) {
   let suggestions = [];
-  for (let j = 0; j < 10; j++) {
+  for (let j = 0; j < 12; j++) {
     suggestions.push(faker.random.number(100));
   }
   const restaurant = new Suggestion({
     id: i,
-    name: faker.name.findName(),
+    name: faker.company.companyName(),
     address: faker.address.streetAddress(),
     waiting_time: faker.random.number(60),
     minimum: faker.random.number(15),
