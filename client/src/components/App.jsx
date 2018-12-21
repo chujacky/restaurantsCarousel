@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import SuggestionList from './SuggestionList.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      restaurant: {},
+      restaurants: [],
     };
   }
 
@@ -13,7 +14,10 @@ class App extends React.Component {
     const id = window.location.pathname.substring(13);
     axios.get(`/restaurants/${id}/suggestions`)
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
+        this.setState({
+          restaurants: response.data,
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -23,7 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <SuggestionList restaurants={this.state.restaurants} />
       </div>
     );
   }

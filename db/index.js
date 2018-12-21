@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/grubhub');
 const suggestionSchema = new mongoose.Schema({
   id: Number,
   name: String,
-  address: String,
+  food: String,
   waiting_time: Number,
   minimum: Number,
   review_no: Number,
