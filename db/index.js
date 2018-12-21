@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/grubhub');
- 
+
 const suggestionSchema = new mongoose.Schema({
   id: Number,
   name: String,
@@ -9,6 +9,7 @@ const suggestionSchema = new mongoose.Schema({
   minimum: Number,
   review_no: Number,
   review_summary: Object,
+  review: Object,
   picture: String,
   suggestions: Array,
   bookmarked: Boolean,

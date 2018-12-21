@@ -26,6 +26,10 @@ for (let i = 1; i < 101; i++) {
         max: 100,
       }),
     },
+    review: {
+      username: faker.name.firstName(),
+      review: faker.lorem.paragraph(),
+    },
     picture: faker.image.food(),
     suggestions,
     bookmarked: faker.random.boolean(),
