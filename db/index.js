@@ -9,6 +9,7 @@ const suggestionSchema = new mongoose.Schema({
   minimum: Number,
   review_no: Number,
   review_summary: Object,
+  review: Object,
   picture: String,
   suggestions: Array,
   bookmarked: Boolean,
