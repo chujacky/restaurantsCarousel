@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Suggestion = require('./index.js');
+const {Suggestion} = require('./index.js');
 const faker = require('faker');
 
 for (let i = 1; i < 101; i++) {
@@ -10,7 +10,7 @@ for (let i = 1; i < 101; i++) {
   const restaurant = new Suggestion({
     id: i,
     name: faker.company.companyName(),
-    address: faker.address.streetAddress(),
+    food: faker.lorem.words(),
     waiting_time: faker.random.number(60),
     minimum: faker.random.number(15),
     review_no: faker.random.number(2000),
