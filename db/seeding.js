@@ -28,7 +28,7 @@ for (let i = 1; i < 101; i++) {
     },
     review: {
       username: faker.name.firstName(),
-      review: faker.lorem.paragraph(),
+      review: faker.lorem.sentence(),
     },
     picture: faker.image.food(),
     suggestions,
