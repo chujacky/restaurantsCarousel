@@ -12,6 +12,9 @@
     "react-dev": "webpack -d --watch"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.0",
     "react": "^16.7.0",
