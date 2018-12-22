@@ -4,4 +4,4 @@ import Suggestions from './components/Suggestions.jsx';
 
 const id = window.location.pathname.substring(13);
 
-ReactDOM.render(<Suggestions id={id}/>, document.getElementById('main'));
+ReactDOM.render(<Suggestions id={id} />, document.getElementById('main'));
