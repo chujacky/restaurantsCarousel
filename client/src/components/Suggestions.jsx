@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SuggestionList from './SuggestionList.jsx';
+import styles from './style.css.js';
 
 class Suggestions extends React.Component {
   constructor(props) {
@@ -25,9 +26,7 @@ class Suggestions extends React.Component {
 
   render() {
     return (
-      <div>
-        <SuggestionList restaurants={this.state.restaurants} />
-      </div>
+      <SuggestionList restaurants={this.state.restaurants} />
     );
   }
 }
