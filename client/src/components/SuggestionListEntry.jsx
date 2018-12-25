@@ -5,7 +5,7 @@ import styles from './style.css.js';
 const SuggestionListEntry = (props) => {
   return (
     <div style={styles.listEntry}>
-      <img style={styles.image} src={props.restaurant.picture} width='255'/>
+      <img style={styles.image} src={props.restaurant.picture} />
       <h3 style={styles.listInfoLeft}>{props.restaurant.name}</h3>
       <div style={styles.listInfoLeft}>
         <span>{props.restaurant.food}</span>

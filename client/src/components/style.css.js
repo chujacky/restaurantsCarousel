@@ -3,16 +3,27 @@ const span = {
 };
 
 const image = {
-  boxSizing: 'inherit',
+  width: '255px',
+  borderRadius: '5%',
 };
 
 const listEntry = {
-  width: 'auto',
+  width: '30%',
   height: 'auto',
   border: '1px gainsboro solid',
+  borderRadius: '5%',
   display: 'flex',
   flexDirection: 'column',
-  boxSizing: 'inherit',
+  margin: '20px',
+};
+
+const carousel = {
+  display: 'flex',
+  margin: 0,
+  padding: 0,
+  position: 'relative',
+  justifyContent: 'center',
+  width: '70%',
 };
 
 const lowerRow = {
@@ -21,21 +32,19 @@ const lowerRow = {
 };
 
 const list = {
-  display: 'flex',
+  display: 'none',
   flexDirection: 'row',
-  overflow: 'hidden',
-  height: '20',
-  alignItems: 'center',
-  border: '1px red solid',
+  justifyContent: 'center',
   fontSize: '14px',
+  width: '30%',
 };
 
-const buttons = {
-  color: 'blue',
-  zIndex: 2,
-  borderRadius: '50%',
-  padding: '0.5% 0.8%',
-  border: '1px black solid',
+const listActive = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  fontSize: '14px',
+  width: '100%',
 };
 
 const stars = {
@@ -51,14 +60,51 @@ const listInfoRight = {
   marginRight: '8px',
 };
 
+const rightArrow = {
+  position: 'absolute',
+  width: '50px',
+  height: '50px',
+  right: '-10px',
+  top: '150px',
+  backgroundColor: 'white',
+  zIndex: 2,
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
+  borderRadius: '50%',
+  textAlign: 'center',
+  lineHeight: '50px',
+  fontSize: '30px',
+  fontWeight: '700',
+  color: '#0070eb',
+};
+
+const leftArrow = {
+  position: 'absolute',
+  width: '50px',
+  height: '50px',
+  left: '-10px',
+  top: '150px',
+  backgroundColor: 'white',
+  zIndex: 2,
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
+  borderRadius: '50%',
+  textAlign: 'center',
+  lineHeight: '50px',
+  fontSize: '30px',
+  fontWeight: '700',
+  color: '#0070eb',
+};
+
 export default {
   span,
   listEntry,
   list,
+  listActive,
   stars,
-  buttons,
   listInfoLeft,
   listInfoRight,
   lowerRow,
   image,
+  carousel,
+  rightArrow,
+  leftArrow,
 };
