@@ -8,13 +8,12 @@ const image = {
 };
 
 const listEntry = {
-  width: '30%',
-  height: 'auto',
+  width: '100%',
   border: '1px gainsboro solid',
   borderRadius: '5%',
   display: 'flex',
   flexDirection: 'column',
-  margin: '20px',
+  margin: '15px',
 };
 
 const carousel = {
@@ -22,9 +21,17 @@ const carousel = {
   margin: 0,
   padding: 0,
   position: 'relative',
-  justifyContent: 'center',
-  width: '70%',
+  justifyContent: 'space-between',
+  width: '63%',
 };
+
+const carouselBody = {
+  display: 'flex',
+  margin: 0,
+  padding: 0,
+  width: 'auto',
+};
+
 
 const lowerRow = {
   display: 'flex',
@@ -32,19 +39,51 @@ const lowerRow = {
 };
 
 const list = {
-  display: 'none',
+  display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'center',
   fontSize: '14px',
-  width: '30%',
+  visibility: 'hidden',
+  transition: 'visibility 1s ease 0s',
 };
 
 const listActive = {
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'center',
   fontSize: '14px',
-  width: '100%',
+  visibility: 'visible',
+  transition: 'visibility 01s ease 0s',
+};
+
+const list0 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(0%)',
+  transition: 'transform 1s ease 0s',
+};
+
+const list1 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(-25%)',
+  transition: 'transform 1s ease 0s',
+};
+
+const list2 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(-50%)',
+  transition: 'transform 1s ease 0s',
+};
+
+const list3 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(-75%)',
+  transition: 'transform 1s ease 0s',
 };
 
 const stars = {
@@ -99,12 +138,17 @@ export default {
   listEntry,
   list,
   listActive,
+  list0,
+  list1,
+  list2,
+  list3,
   stars,
   listInfoLeft,
   listInfoRight,
   lowerRow,
   image,
   carousel,
+  carouselBody,
   rightArrow,
   leftArrow,
 };

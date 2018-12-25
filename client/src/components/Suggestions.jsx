@@ -33,20 +33,23 @@ class Suggestions extends React.Component {
   }
 
   next() {
+    const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
     this.setState({
-      active: this.state.active === 3 ? this.state.active : this.state.active + 1,
+      active,
     });
   }
 
   back() {
+    const active = this.state.active === 0 ? this.state.active : this.state.active - 1;
     this.setState({
-      active: this.state.active === 0 ? this.state.active : this.state.active - 1,
+      active,
     });
   }
 
   render() {
     return (
-      <Carousel restaurants={this.state.restaurants} active={this.state.active} next={this.next} back={this.back}/>
+      <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
+        active={this.state.active} />
     );
   }
 }
