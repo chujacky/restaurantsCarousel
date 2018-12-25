@@ -3,17 +3,35 @@ const span = {
 };
 
 const image = {
-  boxSizing: 'inherit',
+  width: '255px',
+  borderRadius: '5%',
 };
 
 const listEntry = {
-  width: 'auto',
-  height: 'auto',
+  width: '100%',
   border: '1px gainsboro solid',
+  borderRadius: '5%',
   display: 'flex',
   flexDirection: 'column',
-  boxSizing: 'inherit',
+  margin: '15px',
 };
+
+const carousel = {
+  display: 'flex',
+  margin: 0,
+  padding: 0,
+  position: 'relative',
+  justifyContent: 'space-between',
+  width: '63%',
+};
+
+const carouselBody = {
+  display: 'flex',
+  margin: 0,
+  padding: 0,
+  width: 'auto',
+};
+
 
 const lowerRow = {
   display: 'flex',
@@ -23,19 +41,49 @@ const lowerRow = {
 const list = {
   display: 'flex',
   flexDirection: 'row',
-  overflow: 'hidden',
-  height: '20',
-  alignItems: 'center',
-  border: '1px red solid',
   fontSize: '14px',
+  visibility: 'hidden',
+  transition: 'visibility 1s ease 0s',
 };
 
-const buttons = {
-  color: 'blue',
-  zIndex: 2,
-  borderRadius: '50%',
-  padding: '0.5% 0.8%',
-  border: '1px black solid',
+const listActive = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  visibility: 'visible',
+  transition: 'visibility 01s ease 0s',
+};
+
+const list0 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(0%)',
+  transition: 'transform 1s ease 0s',
+};
+
+const list1 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(-25%)',
+  transition: 'transform 1s ease 0s',
+};
+
+const list2 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(-50%)',
+  transition: 'transform 1s ease 0s',
+};
+
+const list3 = {
+  display: 'flex',
+  flexDirection: 'row',
+  fontSize: '14px',
+  transform: 'translateX(-75%)',
+  transition: 'transform 1s ease 0s',
 };
 
 const stars = {
@@ -51,14 +99,56 @@ const listInfoRight = {
   marginRight: '8px',
 };
 
+const rightArrow = {
+  position: 'absolute',
+  width: '50px',
+  height: '50px',
+  right: '-10px',
+  top: '150px',
+  backgroundColor: 'white',
+  zIndex: 2,
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
+  borderRadius: '50%',
+  textAlign: 'center',
+  lineHeight: '50px',
+  fontSize: '30px',
+  fontWeight: '700',
+  color: '#0070eb',
+};
+
+const leftArrow = {
+  position: 'absolute',
+  width: '50px',
+  height: '50px',
+  left: '-10px',
+  top: '150px',
+  backgroundColor: 'white',
+  zIndex: 2,
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
+  borderRadius: '50%',
+  textAlign: 'center',
+  lineHeight: '50px',
+  fontSize: '30px',
+  fontWeight: '700',
+  color: '#0070eb',
+};
+
 export default {
   span,
   listEntry,
   list,
+  listActive,
+  list0,
+  list1,
+  list2,
+  list3,
   stars,
-  buttons,
   listInfoLeft,
   listInfoRight,
   lowerRow,
   image,
+  carousel,
+  carouselBody,
+  rightArrow,
+  leftArrow,
 };
