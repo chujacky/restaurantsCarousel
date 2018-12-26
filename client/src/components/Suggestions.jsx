@@ -18,13 +18,13 @@ class Suggestions extends React.Component {
   componentDidMount() {
     axios.get(`/restaurants/${this.props.id}/suggestions`)
       .then((response) => {
-        const data = [];
-        while (response.data.length) {
-          data.push(response.data.splice(0, 3));
-        }
-        console.log(data);
+        // const data = [];
+        // while (response.data.length) {
+        //   data.push(response.data.splice(0, 3));
+        // }
+        console.log(response.data);
         this.setState({
-          restaurants: data,
+          restaurants: response.data,
         });
       })
       .catch((err) => {

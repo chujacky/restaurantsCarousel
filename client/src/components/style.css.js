@@ -30,6 +30,7 @@ const carouselBody = {
   margin: 0,
   padding: 0,
   width: 'auto',
+  overflow: 'hidden',
 };
 
 
