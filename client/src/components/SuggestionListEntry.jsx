@@ -3,7 +3,6 @@ import Stars from './Stars.jsx';
 import styles from './style.css.js';
 
 const SuggestionListEntry = (props) => {
-  console.log(props.restaurant)
   return (
     <div style={styles.listEntry}>
       <img style={styles.image} src={props.restaurant.picture} />

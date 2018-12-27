@@ -6,7 +6,7 @@ import Carousel from './Carousel.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Suggesion Component', () => {
+describe('Suggesions Component', () => {
   test('renders Suggestion properly', () => {
     const wrapper = shallow(<Suggestions />);
     expect(wrapper).toHaveLength(1);
