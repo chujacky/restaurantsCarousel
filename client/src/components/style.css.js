@@ -10,6 +10,7 @@ const image = {
 const title = {
   color: 'black',
   fontSize: '16px',
+  margin: '10px 8px',
 };
 
 const listEntry = {
@@ -147,6 +148,8 @@ const review = {
   display: 'flex',
   fontFamily: "'Nunito Sans', sans-serif",
   margin: '10px',
+  justifyContent: 'flex-start',
+  width: '100%',
 };
 
 const reviewContent = {
@@ -162,7 +165,7 @@ const avatar = {
   backgroundColor: '#40c2de',
   textAlign: 'center',
   lineHeight: '40px',
-  margin: '20px 7px',
+  margin: '20px 10px',
 };
 
 const reviewBorder = {
