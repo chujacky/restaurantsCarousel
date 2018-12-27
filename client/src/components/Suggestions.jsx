@@ -18,10 +18,7 @@ class Suggestions extends React.Component {
   componentDidMount() {
     axios.get(`/restaurants/${this.props.id}/suggestions`)
       .then((response) => {
-        const data = [];
-        for (let i = 0; i < response.data.length; i += 1) {
-          data.push(response.data[i][0]);
-        }
+        const data = response.data.map(restaurant => restaurant[0]);
         this.setState({
           restaurants: data,
         });

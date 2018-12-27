@@ -12,11 +12,11 @@ const Carousel = (props) =>  {
         : <div style={styles.leftArrow} onClick={props.back} id='prevButton' >&lt;</div>
       }
       <div style={styles.carouselBody}>
-        <div style={list}>
+        {/* <div style={list}> */}
           {props.restaurants.map((restaurant, index) => {
             return <SuggestionListEntry restaurant={restaurant} active={props.active} index={index} key={restaurant.id} />;
           })}
-        </div>
+        {/* </div> */}
       </div>
       {props.active === 3
         ? null

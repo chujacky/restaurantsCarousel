@@ -8,29 +8,30 @@ const image = {
 };
 
 const listEntry = {
-  width: '100%',
+  width: '30%',
   border: '1px gainsboro solid',
   borderRadius: '5%',
-  display: 'flex',
+  fontSize: '14px',
+  display: 'inline',
   flexDirection: 'column',
   margin: '15px',
 };
 
 const carousel = {
-  display: 'flex',
   margin: 0,
   padding: 0,
   position: 'relative',
-  justifyContent: 'space-between',
-  width: '63%',
+  width: '80%',
+  border: '1px green solid',
 };
 
 const carouselBody = {
   display: 'flex',
   margin: 0,
   padding: 0,
-  width: 'auto',
-  overflow: 'hidden',
+  width: '90%',
+  overflow: 'auto',
+  border: '1px red solid',
 };
 
 
