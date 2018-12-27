@@ -1,5 +1,6 @@
 const span = {
   color: 'orange',
+  margin: '1px',
 };
 
 const image = {
@@ -96,11 +97,11 @@ const stars = {
 };
 
 const listInfoLeft = {
-  marginLeft: '8px',
+  marginLeft: '10px',
 };
 
 const listInfoRight = {
-  marginRight: '8px',
+  marginRight: '10px',
 };
 
 const rightArrow = {
@@ -142,6 +143,7 @@ const reviewSummary = {
   justifyContent: 'center',
   textAlign: 'center',
   fontSize: '12px',
+  color: 'rgba(0, 0, 0, 0.55)',
 };
 
 const review = {
@@ -166,6 +168,7 @@ const avatar = {
   textAlign: 'center',
   lineHeight: '40px',
   margin: '20px 10px',
+  color: 'white',
 };
 
 const reviewBorder = {
@@ -175,10 +178,28 @@ const reviewBorder = {
   padding: '0 10px',
 };
 
-const tooltip = {
+const tooltipBody = {
   display: 'flex',
+  width: '100%',
+  height: '100%',
   flexDirection: 'column',
   alignItems: 'center',
+  position: 'absolute',
+  backgroundColor: 'white',
+  zIndex: 1,
+  top: '-15px',
+  right: '-110px',
+  visibility: 'hidden',
+};
+
+const tooltipBodyActive = {
+  visibility: 'visible',
+};
+
+const tooltip = {
+  position: 'relative',
+  height: '220px',
+  width: '220px',
 };
 
 export default {
@@ -204,6 +225,8 @@ export default {
   reviewContent,
   review,
   reviewBorder,
-  tooltip,
   title,
+  tooltip,
+  tooltipBody,
+  tooltipBodyActive,
 };

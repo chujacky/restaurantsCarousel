@@ -10,17 +10,26 @@ class Suggestions extends React.Component {
     this.state = {
       restaurants: [],
       active: 0,
+      carousel: 3,
+      hover: 0,
     };
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
+    this.hoverIn = this.hoverIn.bind(this);
+    this.hoverOut = this.hoverOut.bind(this);
   }
 
   componentDidMount() {
     axios.get(`/restaurants/${this.props.id}/suggestions`)
       .then((response) => {
         const data = response.data.map(restaurant => restaurant[0]);
+        const restaurants = [];
+        while (data.length) {
+          restaurants.push(data.splice(0, this.state.carousel));
+        }
+        console.log(restaurants);
         this.setState({
-          restaurants: data,
+          restaurants: restaurants,
         });
       })
       .catch((err) => {
@@ -42,10 +51,25 @@ class Suggestions extends React.Component {
     });
   }
 
+  hoverIn(id) {
+    console.log(id);
+    this.setState({
+      hover: id,
+    });
+  }
+
+  hoverOut() {
+    console.log('out');
+    this.setState({
+      hover: 0,
+    });
+  }
+
   render() {
     return (
       <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
-        active={this.state.active} />
+        active={this.state.active} hover={this.state.hover} 
+        hoverIn={this.hoverIn} hoverOut={this.hoverOut} />
     );
   }
 }

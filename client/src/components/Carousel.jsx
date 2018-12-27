@@ -1,5 +1,5 @@
 import React from 'react';
-import SuggestionListEntry from './SuggestionListEntry.jsx';
+import CarouselEntry from './CarouselEntry.jsx';
 import styles from './style.css.js';
 
 const Carousel = (props) =>  {
@@ -12,11 +12,14 @@ const Carousel = (props) =>  {
         : <div style={styles.leftArrow} onClick={props.back} id='prevButton' >&lt;</div>
       }
       <div style={styles.carouselBody}>
-        {/* <div style={list}> */}
-          {props.restaurants.map((restaurant, index) => {
-            return <SuggestionListEntry restaurant={restaurant} active={props.active} index={index} key={restaurant.id} />;
+        <div style={list}>
+          {props.restaurants.map((restaurants, index) => {
+            return (
+              <CarouselEntry restaurants={restaurants} active={props.active} index={index}
+              hoverIn={props.hoverIn} hoverOut={props.hoverOut} hover={props.hover}/>
+            );
           })}
-        {/* </div> */}
+        </div>
       </div>
       {props.active === 3
         ? null
