@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Carousel from './Carousel.jsx';
-import SuggestionListEntry from './RestaurantEntry.jsx';
+import RestaurantEntry from './RestaurantEntry.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -13,7 +13,7 @@ describe('Carousel', () => {
     const wrapper = shallow(
       <Carousel restaurants={restaurants} />
     );
-    expect(wrapper.find(SuggestionListEntry)).toHaveLength(4);
+    expect(wrapper.find(RestaurantEntry)).toHaveLength(4);
   });
 
   test('should not render prev button when displaying top 3 restaurants', () => {

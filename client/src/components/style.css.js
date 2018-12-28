@@ -15,12 +15,13 @@ const title = {
 };
 
 const listEntry = {
-  boxSizing: 'inherit',
-  border: '1px gainsboro solid',
+  border: '1px solid rgba(0,0,0,.1)',
   borderRadius: '5%',
   fontSize: '12px',
   display: 'flex',
   flexDirection: 'column',
+  flexBasis: '33%',
+  width: 'auto',
   margin: '15px',
   fontFamily: "'Nunito Sans', sans-serif",
   color: 'rgba(0,0,0,.55)',
@@ -35,12 +36,7 @@ const ellipsis = {
 const carousel = {
   margin: 0,
   padding: 0,
-  position: 'relative',
-  width: '70%',
-};
-
-const carouselEntry = {
-  display: 'flex',
+  width: '95%',
 };
 
 const carouselEntryActive = {
@@ -224,7 +220,6 @@ export default {
   image,
   carousel,
   carouselBody,
-  carouselEntry,
   avatar,
   carouselEntryActive,
   rightArrow,
