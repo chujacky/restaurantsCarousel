@@ -3,7 +3,7 @@ import Stars from './Stars.jsx';
 import Tooltip from './Tooltip.jsx';
 import styles from './style.css.js';
 
-const SuggestionListEntry = (props) => {
+const RestaurantEntry = (props) => {
   return (
     <div>
       <a href={`http://localhost:3002/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
@@ -35,4 +35,4 @@ const SuggestionListEntry = (props) => {
   );
 };
 
-export default SuggestionListEntry;
+export default RestaurantEntry;
