@@ -26,6 +26,12 @@ const listEntry = {
   color: 'rgba(0,0,0,.55)',
 };
 
+const ellipsis = {
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+};
+
 const carousel = {
   margin: 0,
   padding: 0,
@@ -46,7 +52,7 @@ const carouselBody = {
   display: 'flex',
   margin: 0,
   padding: 0,
-  overflow: 'hidden',
+  overflow: 'scroll',
   boxSizing: 'inherit',
 };
 
@@ -186,20 +192,22 @@ const tooltipBody = {
   alignItems: 'center',
   position: 'absolute',
   backgroundColor: 'white',
-  zIndex: 1,
   top: '-15px',
   right: '-110px',
   visibility: 'hidden',
 };
 
 const tooltipBodyActive = {
+  zIndex: 1,
   visibility: 'visible',
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
 };
 
 const tooltip = {
   position: 'relative',
   height: '220px',
   width: '220px',
+  visibility: 'collapse',
 };
 
 export default {
@@ -229,4 +237,5 @@ export default {
   tooltip,
   tooltipBody,
   tooltipBodyActive,
+  ellipsis,
 };

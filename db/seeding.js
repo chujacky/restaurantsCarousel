@@ -12,9 +12,17 @@ const pictures = ['https://s.hdnux.com/photos/72/15/17/15350667/7/premium_landsc
 ];
 
 for (let i = 1; i < 101; i += 1) {
-  const suggestions = [];
-  for (let j = 0; j < 12; j += 1) {
-    suggestions.push(faker.random.number(100));
+  const suggestions = {};
+  let count = 0;
+  while (count < 12) {
+    const randomNum = faker.random.number({
+      min: 1,
+      max: 100,
+    });
+    if (!suggestions[randomNum] && randomNum !== i) {
+      suggestions[randomNum] = randomNum;
+      count += 1;
+    }
   }
   const restaurant = new Suggestion({
     id: i,
@@ -40,7 +48,7 @@ for (let i = 1; i < 101; i += 1) {
       review: faker.lorem.sentence(),
     },
     picture: pictures[faker.random.number(pictures.length - 1)],
-    suggestions,
+    suggestions: Object.values(suggestions),
     bookmarked: faker.random.boolean(),
   });
   restaurant.save();

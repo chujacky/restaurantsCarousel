@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './style.css.js';
 
 const Tooltip = (props) => {
-  console.log(props.hover === props.id);
   const style = props.hover === props.id
     ? Object.assign({}, styles.tooltipBody, styles.tooltipBodyActive)
     : styles.tooltipBody;

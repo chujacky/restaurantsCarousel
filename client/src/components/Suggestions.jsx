@@ -10,7 +10,6 @@ class Suggestions extends React.Component {
     this.state = {
       restaurants: [],
       active: 0,
-      carousel: 3,
       hover: 0,
     };
     this.next = this.next.bind(this);
@@ -23,13 +22,8 @@ class Suggestions extends React.Component {
     axios.get(`/restaurants/${this.props.id}/suggestions`)
       .then((response) => {
         const data = response.data.map(restaurant => restaurant[0]);
-        const restaurants = [];
-        while (data.length) {
-          restaurants.push(data.splice(0, this.state.carousel));
-        }
-        console.log(restaurants);
         this.setState({
-          restaurants: restaurants,
+          restaurants: data,
         });
       })
       .catch((err) => {
