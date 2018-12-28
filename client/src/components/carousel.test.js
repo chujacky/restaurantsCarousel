@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Carousel from './Carousel.jsx';
-import SuggestionListEntry from './SuggestionListEntry.jsx';
+import SuggestionListEntry from './RestaurantEntry.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 

@@ -1,5 +1,6 @@
 const span = {
   color: 'orange',
+  margin: '1px',
 };
 
 const image = {
@@ -10,6 +11,7 @@ const image = {
 const title = {
   color: 'black',
   fontSize: '16px',
+  margin: '10px 8px',
 };
 
 const listEntry = {
@@ -22,6 +24,12 @@ const listEntry = {
   margin: '15px',
   fontFamily: "'Nunito Sans', sans-serif",
   color: 'rgba(0,0,0,.55)',
+};
+
+const ellipsis = {
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
 };
 
 const carousel = {
@@ -44,7 +52,7 @@ const carouselBody = {
   display: 'flex',
   margin: 0,
   padding: 0,
-  overflow: 'hidden',
+  overflow: 'scroll',
   boxSizing: 'inherit',
 };
 
@@ -95,11 +103,11 @@ const stars = {
 };
 
 const listInfoLeft = {
-  marginLeft: '8px',
+  marginLeft: '10px',
 };
 
 const listInfoRight = {
-  marginRight: '8px',
+  marginRight: '10px',
 };
 
 const rightArrow = {
@@ -141,12 +149,15 @@ const reviewSummary = {
   justifyContent: 'center',
   textAlign: 'center',
   fontSize: '12px',
+  color: 'rgba(0, 0, 0, 0.55)',
 };
 
 const review = {
   display: 'flex',
   fontFamily: "'Nunito Sans', sans-serif",
   margin: '10px',
+  justifyContent: 'flex-start',
+  width: '100%',
 };
 
 const reviewContent = {
@@ -162,7 +173,8 @@ const avatar = {
   backgroundColor: '#40c2de',
   textAlign: 'center',
   lineHeight: '40px',
-  margin: '20px 7px',
+  margin: '20px 10px',
+  color: 'white',
 };
 
 const reviewBorder = {
@@ -172,10 +184,30 @@ const reviewBorder = {
   padding: '0 10px',
 };
 
-const tooltip = {
+const tooltipBody = {
   display: 'flex',
+  width: '100%',
+  height: '100%',
   flexDirection: 'column',
   alignItems: 'center',
+  position: 'absolute',
+  backgroundColor: 'white',
+  top: '-15px',
+  right: '-110px',
+  visibility: 'hidden',
+};
+
+const tooltipBodyActive = {
+  zIndex: 1,
+  visibility: 'visible',
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
+};
+
+const tooltip = {
+  position: 'relative',
+  height: '220px',
+  width: '220px',
+  visibility: 'collapse',
 };
 
 export default {
@@ -201,6 +233,9 @@ export default {
   reviewContent,
   review,
   reviewBorder,
-  tooltip,
   title,
+  tooltip,
+  tooltipBody,
+  tooltipBodyActive,
+  ellipsis,
 };

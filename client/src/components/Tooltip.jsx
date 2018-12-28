@@ -3,8 +3,12 @@ import React from 'react';
 import styles from './style.css.js';
 
 const Tooltip = (props) => {
+  const style = props.hover === props.id
+    ? Object.assign({}, styles.tooltipBody, styles.tooltipBodyActive)
+    : styles.tooltipBody;
+
   return (
-    <div style={styles.tooltip}>
+    <div style={style}>
       <p>Here's what people are saying:</p>
       <div className="summary" style={styles.reviewSummary}>
         <div>
@@ -34,7 +38,7 @@ const Tooltip = (props) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Tooltip;

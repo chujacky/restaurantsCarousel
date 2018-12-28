@@ -10,9 +10,12 @@ class Suggestions extends React.Component {
     this.state = {
       restaurants: [],
       active: 0,
+      hover: 0,
     };
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
+    this.hoverIn = this.hoverIn.bind(this);
+    this.hoverOut = this.hoverOut.bind(this);
   }
 
   componentDidMount() {
@@ -42,10 +45,25 @@ class Suggestions extends React.Component {
     });
   }
 
+  hoverIn(id) {
+    console.log(id);
+    this.setState({
+      hover: id,
+    });
+  }
+
+  hoverOut() {
+    console.log('out');
+    this.setState({
+      hover: 0,
+    });
+  }
+
   render() {
     return (
       <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
-        active={this.state.active} />
+        active={this.state.active} hover={this.state.hover} 
+        hoverIn={this.hoverIn} hoverOut={this.hoverOut} />
     );
   }
 }
