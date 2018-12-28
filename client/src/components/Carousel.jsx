@@ -13,12 +13,15 @@ const Carousel = (props) =>  {
         ? null
         : <div style={styles.rightArrow} onClick={props.next} id="nextButton" >&gt;</div>
       }
-      {props.restaurants.map((restaurant, index) => {
-        return (
-          <RestaurantEntry restaurant={restaurant} active={props.active} index={index}
-          hoverIn={props.hoverIn} hoverOut={props.hoverOut} hover={props.hover}/>
-        );
-      })}
+      <div className="carouselBody" style={styles.carouselBody}>
+        {props.restaurants.map((restaurant, index) => {
+          return (
+            <RestaurantEntry restaurant={restaurant} active={props.active} index={index}
+            hoverIn={props.hoverIn} hoverOut={props.hoverOut} hover={props.hover}/>
+   
+          );
+        })}
+      </div>
     </div>
   );
 };
