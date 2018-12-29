@@ -6,7 +6,7 @@ const span = {
 
 const card = {
   border: '1px solid rgba(0,0,0,.1)',
-  borderRadius: '5%',
+  borderRadius: '5px',
   width: '100%',
   padding: 0,
   fontSize: '12px',
@@ -18,8 +18,8 @@ const cardImage = {
   height: '132px',
   width: '100%',
   overflow: 'hidden',
-  borderTopLeftRadius: '5%',
-  borderTopRightRadius: '5%',
+  borderTopLeftRadius: '5px',
+  borderTopRightRadius: '5px',
   margin: 0,
 };
 
@@ -55,7 +55,6 @@ const ellipsis = {
 
 const carousel = {
   width: '936px',
-  maxWidth: '100%',
   margin: 0,
   padding: 0,
   position: 'relative',
@@ -68,13 +67,12 @@ const carouselBody = {
   overflowX: 'scroll',
   overflow: 'hide',
   display: 'flex',
-  scrollBehavior: 'smooth',
+  scrollBehavior: 'smooth'
 };
 
 const lowerRow = {
   display: 'flex',
   justifyContent: 'space-between',
-  padding: '10px, 0',
 };
 
 const stars = {
@@ -94,7 +92,7 @@ const rightArrow = {
   borderRadius: '50%',
   textAlign: 'center',
   lineHeight: '40px',
-  fontSize: '30px',
+  fontSize: '25px',
   fontWeight: '700',
   color: '#0070eb',
 };
@@ -111,7 +109,7 @@ const leftArrow = {
   borderRadius: '50%',
   textAlign: 'center',
   lineHeight: '40px',
-  fontSize: '30px',
+  fontSize: '25px',
   fontWeight: '700',
   color: '#0070eb',
 };
