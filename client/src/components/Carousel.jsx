@@ -18,7 +18,6 @@ const Carousel = (props) =>  {
           return (
             <RestaurantEntry restaurant={restaurant} active={props.active} index={index}
             hoverIn={props.hoverIn} hoverOut={props.hoverOut} hover={props.hover}/>
-   
           );
         })}
       </div>

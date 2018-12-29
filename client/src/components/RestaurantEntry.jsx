@@ -29,13 +29,12 @@ const RestaurantEntry = (props) => {
           </div>
         </div>
       </div>
+      <div style={styles.tooltip}>
+        <Tooltip summary={props.restaurant.review_summary} review={props.restaurant.review}
+        hover={props.hover} id={props.restaurant.id} />
+      </div>
     </div>
   );
 };
 
 export default RestaurantEntry;
-
-// <div style={styles.tooltip}>
-//   <Tooltip summary={props.restaurant.review_summary} review={props.restaurant.review}
-//   hover={props.hover} id={props.restaurant.id} />
-// </div>
