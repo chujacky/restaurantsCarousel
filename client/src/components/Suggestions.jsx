@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Carousel from './Carousel.jsx';
+import TooltipList from './TooltipList.jsx';
 import styles from './style.css.js';
 
 
@@ -12,6 +13,7 @@ class Suggestions extends React.Component {
       restaurants: [],
       active: 0,
       hover: 0,
+      position: [0, 0],
     };
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
@@ -48,25 +50,30 @@ class Suggestions extends React.Component {
     this.scroller.current.scrollLeft -= 924;
   }
 
-  hoverIn(id) {
-    console.log(id);
-    this.setState({
-      hover: id,
-    });
+  hoverIn(id, e) {
+      const position = [e.screenX - 150, window.screenY - 50];
+      this.setState({
+        hover: id,
+        position,
+      })
   }
 
   hoverOut() {
     console.log('out');
     this.setState({
       hover: 0,
+      position: [0, 0],
     });
   }
 
   render() {
     return (
-      <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
-        active={this.state.active} hover={this.state.hover} 
-        hoverIn={this.hoverIn} hoverOut={this.hoverOut} scroll={this.scroller} />
+      <div>
+        <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
+        active={this.state.active} hoverIn={this.hoverIn}
+        hoverOut={this.hoverOut} scroll={this.scroller} />
+        <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
+      </div>
     );
   }
 }
