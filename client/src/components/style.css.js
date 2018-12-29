@@ -54,7 +54,7 @@ const ellipsis = {
 };
 
 const carousel = {
-  width: '936px',
+  maxWidth: '100%',
   margin: 0,
   padding: 0,
   position: 'relative',
@@ -125,7 +125,8 @@ const reviewSummary = {
 const review = {
   display: 'flex',
   fontFamily: "'Nunito Sans', sans-serif",
-  margin: '10px',
+  padding: '20px 0',
+  borderBottom: '2px solid rgba(0,0,0,.2)',
   justifyContent: 'flex-start',
   width: '100%',
 };
@@ -154,6 +155,10 @@ const reviewBorder = {
   padding: '0 10px',
 };
 
+const suggestion = {
+  width: '936px',
+};
+
 const tooltipBody = {
   display: 'flex',
   width: '300px',
@@ -163,10 +168,15 @@ const tooltipBody = {
   position: 'absolute',
   backgroundColor: 'white',
   visibility: 'collapse',
+  border: '1px solid rgba(0,0,0,.1)',
+};
+
+const tooltipLink = {
+  color: '#0070eb',
 };
 
 const tooltipBodyActive = {
-  zIndex: 1,
+  zIndex: 2,
   visibility: 'visible',
   boxShadow: '0 3px 6px rgba(0,0,0,.1)',
 };
@@ -187,10 +197,12 @@ export default {
   review,
   reviewBorder,
   title,
+  tooltipLink,
   tooltipBody,
   tooltipBodyActive,
   ellipsis,
   card,
   cardImage,
   cardInfo,
+  suggestion,
 };

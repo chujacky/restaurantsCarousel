@@ -41,8 +41,8 @@ const Tooltip = (props) => {
           <div>{props.restaurant.review.review}</div>
         </div>
       </div>
-      <div>
-        <a href="">All Reviews ({props.restaurant.review_no})</a>
+      <div style={{ padding: '20px' }}> 
+        <a href="" style={styles.tooltipLink}>All Reviews ({props.restaurant.review_no})</a>
       </div>
     </div>
   );

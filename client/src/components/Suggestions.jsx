@@ -50,12 +50,12 @@ class Suggestions extends React.Component {
     this.scroller.current.scrollLeft -= 924;
   }
 
-  hoverIn(id, e) {
-      const position = [e.screenX - 150, window.screenY - 50];
-      this.setState({
-        hover: id,
-        position,
-      })
+  hoverIn(id, e, index) {
+    const position = [100 + 308*index, 300];
+    this.setState({
+      hover: id,
+      position,
+    })
   }
 
   hoverOut() {
@@ -68,7 +68,10 @@ class Suggestions extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.suggestion}>
+        <div>
+          <h3 style={{padding:'0 20px'}}>Sponsored restaurants in your area</h3>
+        </div>
         <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
         active={this.state.active} hoverIn={this.hoverIn}
         hoverOut={this.hoverOut} scroll={this.scroller} />

@@ -5,10 +5,10 @@ import styles from './style.css.js';
 const TooltipList = (props) => {
   return (
     <div>
-    {props.restaurants.map((restaurant) => {
+    {props.restaurants.map((restaurant, index) => {
       return (
         <Tooltip restaurant={restaurant} hover={props.hover} 
-        id={restaurant.id} position={props.position} />
+        id={restaurant.id} position={props.position}/>
       )
     })}
     </div>

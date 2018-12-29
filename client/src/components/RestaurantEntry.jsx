@@ -22,7 +22,7 @@ const RestaurantEntry = (props) => {
                 <div>${props.restaurant.minimum} min</div>
               </span>
             </div>
-            <div onMouseEnter={(e) => props.hoverIn(props.restaurant.id, e)} onMouseLeave={props.hoverOut}>
+            <div onMouseEnter={(e) => props.hoverIn(props.restaurant.id, e, props.index)} onMouseLeave={props.hoverOut}>
               <Stars stars={props.restaurant.review_summary.stars}/>
               <div>{props.restaurant.review_no} ratings</div>
             </div>
