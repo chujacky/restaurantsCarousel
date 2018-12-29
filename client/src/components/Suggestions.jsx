@@ -7,6 +7,7 @@ import styles from './style.css.js';
 class Suggestions extends React.Component {
   constructor(props) {
     super(props);
+    this.scroller = React.createRef();
     this.state = {
       restaurants: [],
       active: 0,
@@ -36,6 +37,7 @@ class Suggestions extends React.Component {
     this.setState({
       active,
     });
+    this.scroller.current.scrollLeft += 924;
   }
 
   back() {
@@ -43,6 +45,7 @@ class Suggestions extends React.Component {
     this.setState({
       active,
     });
+    this.scroller.current.scrollLeft -= 924;
   }
 
   hoverIn(id) {
@@ -63,7 +66,7 @@ class Suggestions extends React.Component {
     return (
       <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
         active={this.state.active} hover={this.state.hover} 
-        hoverIn={this.hoverIn} hoverOut={this.hoverOut} />
+        hoverIn={this.hoverIn} hoverOut={this.hoverOut} scroll={this.scroller} />
     );
   }
 }

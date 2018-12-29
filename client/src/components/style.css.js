@@ -1,29 +1,50 @@
 const span = {
   color: 'orange',
-  margin: '1px',
+  marginBottom: '2px',
+  marginRight: '2px',
 };
 
-const image = {
-  width: '255px',
-  borderRadius: '5%',
+const card = {
+  border: '1px solid rgba(0,0,0,.1)',
+  borderRadius: '5px',
+  width: '100%',
+  padding: 0,
+  fontSize: '12px',
+  fontFamily: "'Nunito Sans', sans-serif",
+  color: 'rgba(0,0,0,.55)',
+};
+
+const cardImage = {
+  height: '132px',
+  width: '100%',
+  overflow: 'hidden',
+  borderTopLeftRadius: '5px',
+  borderTopRightRadius: '5px',
+  margin: 0,
+};
+
+const cardInfo = {
+  margin: 0,
+  padding: '12px',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
 };
 
 const title = {
   color: 'black',
   fontSize: '16px',
-  margin: '10px 8px',
+  paddingBottom: '10px',
+  margin: 0,
 };
 
 const listEntry = {
-  boxSizing: 'inherit',
-  border: '1px gainsboro solid',
-  borderRadius: '5%',
-  fontSize: '12px',
-  display: 'flex',
-  flexDirection: 'column',
-  margin: '15px',
-  fontFamily: "'Nunito Sans', sans-serif",
-  color: 'rgba(0,0,0,.55)',
+  padding: '0 20px',
+  height: 'auto',
+  width: 'auto',
+  boxSizing: 'border-box',
+  maxWidth: '33%',
+  flex: '1 0 33%',
 };
 
 const ellipsis = {
@@ -33,27 +54,20 @@ const ellipsis = {
 };
 
 const carousel = {
+  width: '936px',
   margin: 0,
   padding: 0,
   position: 'relative',
-  width: '70%',
-};
-
-const carouselEntry = {
-  display: 'flex',
-};
-
-const carouselEntryActive = {
-  display: 'flex',
-  marginRight: '3.5%',
 };
 
 const carouselBody = {
-  display: 'flex',
   margin: 0,
   padding: 0,
-  overflow: 'scroll',
-  boxSizing: 'inherit',
+  maxWidth: '100%',
+  overflowX: 'scroll',
+  overflow: 'hide',
+  display: 'flex',
+  scrollBehavior: 'smooth'
 };
 
 const lowerRow = {
@@ -61,85 +75,41 @@ const lowerRow = {
   justifyContent: 'space-between',
 };
 
-const list0 = {
-  display: 'flex',
-  flexDirection: 'row',
-  fontSize: '14px',
-  transform: 'translateX(0%)',
-  transition: 'transform 1s ease 0s',
-  boxSizing: 'inherit',
-};
-
-const list1 = {
-  display: 'flex',
-  flexDirection: 'row',
-  fontSize: '14px',
-  transform: 'translateX(-25%)',
-  transition: 'transform 1s ease 0s',
-  boxSizing: 'inherit',
-};
-
-const list2 = {
-  display: 'flex',
-  flexDirection: 'row',
-  fontSize: '14px',
-  transform: 'translateX(-50%)',
-  transition: 'transform 1s ease 0s',
-  boxSizing: 'inherit',
-};
-
-const list3 = {
-  display: 'flex',
-  flexDirection: 'row',
-  fontSize: '14px',
-  transform: 'translateX(-75%)',
-  transition: 'transform 1s ease 0s',
-  boxSizing: 'inherit',
-};
-
 const stars = {
   display: 'flex',
   flexDirection: 'row',
 };
 
-const listInfoLeft = {
-  marginLeft: '10px',
-};
-
-const listInfoRight = {
-  marginRight: '10px',
-};
-
 const rightArrow = {
   position: 'absolute',
-  width: '50px',
-  height: '50px',
-  right: '-10px',
-  top: '150px',
+  width: '40px',
+  height: '40px',
+  right: '0px',
+  top: '110px',
   backgroundColor: 'white',
   zIndex: 2,
   boxShadow: '0 3px 6px rgba(0,0,0,.1)',
   borderRadius: '50%',
   textAlign: 'center',
-  lineHeight: '50px',
-  fontSize: '30px',
+  lineHeight: '40px',
+  fontSize: '25px',
   fontWeight: '700',
   color: '#0070eb',
 };
 
 const leftArrow = {
   position: 'absolute',
-  width: '50px',
-  height: '50px',
-  left: '-10px',
-  top: '150px',
+  width: '40px',
+  height: '40px',
+  left: '0px',
+  top: '110px',
   backgroundColor: 'white',
   zIndex: 2,
   boxShadow: '0 3px 6px rgba(0,0,0,.1)',
   borderRadius: '50%',
   textAlign: 'center',
-  lineHeight: '50px',
-  fontSize: '30px',
+  lineHeight: '40px',
+  fontSize: '25px',
   fontWeight: '700',
   color: '#0070eb',
 };
@@ -213,20 +183,11 @@ const tooltip = {
 export default {
   span,
   listEntry,
-  list0,
-  list1,
-  list2,
-  list3,
   stars,
-  listInfoLeft,
-  listInfoRight,
   lowerRow,
-  image,
   carousel,
   carouselBody,
-  carouselEntry,
   avatar,
-  carouselEntryActive,
   rightArrow,
   leftArrow,
   reviewSummary,
@@ -238,4 +199,7 @@ export default {
   tooltipBody,
   tooltipBodyActive,
   ellipsis,
+  card,
+  cardImage,
+  cardInfo,
 };

@@ -4,7 +4,7 @@ import styles from './style.css.js';
 
 const Carousel = (props) =>  {
   return (
-    <div style={styles.carousel}>
+    <div className="carousel" style={styles.carousel}>
       {props.active === 0
         ? null
         : <div style={styles.leftArrow} onClick={props.back} id="prevButton" >&lt;</div>
@@ -13,7 +13,7 @@ const Carousel = (props) =>  {
         ? null
         : <div style={styles.rightArrow} onClick={props.next} id="nextButton" >&gt;</div>
       }
-      <div style={styles.carouselBody}>
+      <div className="carouselBody" style={styles.carouselBody} ref={props.scroll}>
         {props.restaurants.map((restaurant, index) => {
           return (
             <RestaurantEntry restaurant={restaurant} active={props.active} index={index}
