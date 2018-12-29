@@ -7,9 +7,9 @@ import styles from './style.css.js';
 class Suggestions extends React.Component {
   constructor(props) {
     super(props);
+    this.scroller = React.createRef();
     this.state = {
       restaurants: [],
-      active: 0,
       hover: 0,
     };
     this.next = this.next.bind(this);
@@ -32,10 +32,10 @@ class Suggestions extends React.Component {
   }
 
   next() {
-    const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
-    this.setState({
-      active,
-    });
+    // const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
+    // this.setState({
+    //   active,
+    // });
   }
 
   back() {
@@ -63,7 +63,7 @@ class Suggestions extends React.Component {
     return (
       <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
         active={this.state.active} hover={this.state.hover} 
-        hoverIn={this.hoverIn} hoverOut={this.hoverOut} />
+        hoverIn={this.hoverIn} hoverOut={this.hoverOut} scroll={this.scroller} />
     );
   }
 }
