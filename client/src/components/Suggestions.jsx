@@ -10,6 +10,7 @@ class Suggestions extends React.Component {
     this.scroller = React.createRef();
     this.state = {
       restaurants: [],
+      active: 0,
       hover: 0,
     };
     this.next = this.next.bind(this);
@@ -32,10 +33,11 @@ class Suggestions extends React.Component {
   }
 
   next() {
-    // const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
-    // this.setState({
-    //   active,
-    // });
+    const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
+    this.setState({
+      active,
+    });
+    this.scroller.current.scrollLeft += 924;
   }
 
   back() {
@@ -43,6 +45,7 @@ class Suggestions extends React.Component {
     this.setState({
       active,
     });
+    this.scroller.current.scrollLeft -= 924;
   }
 
   hoverIn(id) {

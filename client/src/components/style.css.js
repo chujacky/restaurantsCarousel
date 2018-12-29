@@ -68,6 +68,7 @@ const carouselBody = {
   overflowX: 'scroll',
   overflow: 'hide',
   display: 'flex',
+  scrollBehavior: 'smooth',
 };
 
 const lowerRow = {
