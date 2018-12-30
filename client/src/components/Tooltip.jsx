@@ -16,19 +16,19 @@ const Tooltip = (props) => {
       <p>Here's what people are saying:</p>
       <div className="summary" style={styles.reviewSummary}>
         <div>
-          <h4 style={styles.title}>{props.restaurant.review_summary.good}%</h4>
+          <h4 style={styles.title}>{props.restaurant.reviewSummary.good}%</h4>
           <span>Food was</span>
           <br/>
           <span>good</span>
         </div>
         <div style={styles.reviewBorder}>
-          <h4 style={styles.title}>{props.restaurant.review_summary.onTime}%</h4>
+          <h4 style={styles.title}>{props.restaurant.reviewSummary.onTime}%</h4>
           <span>Delivery was</span>
           <br/>
           <span>on time</span>
         </div>
         <div>
-        <h4 style={styles.title}>{props.restaurant.review_summary.accurate}%</h4>
+        <h4 style={styles.title}>{props.restaurant.reviewSummary.accurate}%</h4>
           <span>Order was</span>
           <br/>
           <span>accurate</span>
@@ -42,7 +42,7 @@ const Tooltip = (props) => {
         </div>
       </div>
       <div style={{ padding: '20px' }}> 
-        <a href="" style={styles.tooltipLink}>All Reviews ({props.restaurant.review_no})</a>
+        <a href="" style={styles.tooltipLink}>All Reviews ({props.restaurant.reviewNo})</a>
       </div>
     </div>
   );

@@ -28,10 +28,10 @@ for (let i = 1; i < 101; i += 1) {
     id: i,
     name: faker.company.companyName(),
     food: faker.lorem.words(),
-    waiting_time: faker.random.number(60),
+    waitingTime: faker.random.number(60),
     minimum: faker.random.number(15),
-    review_no: faker.random.number(2000),
-    review_summary: {
+    reviewNo: faker.random.number(2000),
+    reviewSummary: {
       stars: faker.random.number(5),
       good: faker.random.number(100),
       onTime: faker.random.number({

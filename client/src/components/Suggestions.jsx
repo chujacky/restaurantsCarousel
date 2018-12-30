@@ -50,8 +50,8 @@ class Suggestions extends React.Component {
     this.scroller.current.scrollLeft -= 924;
   }
 
-  hoverIn(id, e, index) {
-    const position = [100 + 308*index, 300];
+  hoverIn(id, index) {
+    const position = [100 + 308 * index, 300];
     this.setState({
       hover: id,
       position,
