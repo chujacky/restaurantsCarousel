@@ -18,20 +18,16 @@ const RestaurantEntry = (props) => {
           <div style={styles.lowerRow}>
             <div>
               <span>
-                <div style={{ color: 'black' }}>{props.restaurant.waiting_time} mins</div>
+                <div style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime} mins</div>
                 <div>${props.restaurant.minimum} min</div>
               </span>
             </div>
-            <div onMouseEnter={() => props.hoverIn(props.restaurant.id)} onMouseLeave={props.hoverOut}>
-              <Stars stars={props.restaurant.review_summary.stars}/>
-              <div>{props.restaurant.review_no} ratings</div>
+            <div onMouseEnter={() => props.hoverIn(props.restaurant.id, props.index)} onMouseLeave={props.hoverOut}>
+              <Stars stars={props.restaurant.reviewSummary.stars}/>
+              <div>{props.restaurant.reviewNo} ratings</div>
             </div>
           </div>
         </div>
-      </div>
-      <div style={styles.tooltip}>
-        <Tooltip summary={props.restaurant.review_summary} review={props.restaurant.review}
-        hover={props.hover} id={props.restaurant.id} />
       </div>
     </div>
   );

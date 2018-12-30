@@ -54,7 +54,7 @@ const ellipsis = {
 };
 
 const carousel = {
-  width: '936px',
+  maxWidth: '100%',
   margin: 0,
   padding: 0,
   position: 'relative',
@@ -67,7 +67,7 @@ const carouselBody = {
   overflowX: 'scroll',
   overflow: 'hide',
   display: 'flex',
-  scrollBehavior: 'smooth'
+  scrollBehavior: 'smooth',
 };
 
 const lowerRow = {
@@ -125,7 +125,8 @@ const reviewSummary = {
 const review = {
   display: 'flex',
   fontFamily: "'Nunito Sans', sans-serif",
-  margin: '10px',
+  padding: '20px 0',
+  borderBottom: '2px solid rgba(0,0,0,.2)',
   justifyContent: 'flex-start',
   width: '100%',
 };
@@ -154,31 +155,32 @@ const reviewBorder = {
   padding: '0 10px',
 };
 
+const suggestion = {
+  width: '936px',
+};
+
 const tooltipBody = {
   display: 'flex',
-  width: '100%',
-  height: '100%',
+  width: '300px',
+  height: 'auto',
   flexDirection: 'column',
   alignItems: 'center',
   position: 'absolute',
   backgroundColor: 'white',
-  top: '-15px',
-  right: '-110px',
-  visibility: 'hidden',
+  visibility: 'collapse',
+  border: '1px solid rgba(0,0,0,.1)',
+};
+
+const tooltipLink = {
+  color: '#0070eb',
 };
 
 const tooltipBodyActive = {
-  zIndex: 1,
+  zIndex: 2,
   visibility: 'visible',
   boxShadow: '0 3px 6px rgba(0,0,0,.1)',
 };
 
-const tooltip = {
-  position: 'relative',
-  height: '220px',
-  width: '220px',
-  visibility: 'collapse',
-};
 
 export default {
   span,
@@ -195,11 +197,12 @@ export default {
   review,
   reviewBorder,
   title,
-  tooltip,
+  tooltipLink,
   tooltipBody,
   tooltipBodyActive,
   ellipsis,
   card,
   cardImage,
   cardInfo,
+  suggestion,
 };
