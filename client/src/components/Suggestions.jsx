@@ -2,7 +2,26 @@ import React from 'react';
 import axios from 'axios';
 import Carousel from './Carousel.jsx';
 import TooltipList from './TooltipList.jsx';
-import styles from './style.css.js';
+import styled from 'styled-components';
+import styles from './style.css.js'
+
+const SuggestionContainer = styled.div`
+
+  @media screen and (min-width: 1200px) {
+    width: 1140px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    width: 960px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: 720px;
+    max-width: 100%;
+  }
+`;
 
 
 class Suggestions extends React.Component {
@@ -68,15 +87,15 @@ class Suggestions extends React.Component {
 
   render() {
     return (
-      <div style={styles.suggestion}>
+      <SuggestionContainer>
         <div>
-          <h3 style={{padding:'0 20px'}}>Sponsored restaurants in your area</h3>
+          <h3 style={ {padding: '0 20px'} }>Sponsored restaurants in your area</h3>
         </div>
         <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
         active={this.state.active} hoverIn={this.hoverIn}
         hoverOut={this.hoverOut} scroll={this.scroller} />
         <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
-      </div>
+      </SuggestionContainer>
     );
   }
 }

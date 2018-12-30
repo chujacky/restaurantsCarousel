@@ -54,7 +54,7 @@ const ellipsis = {
 };
 
 const carousel = {
-  maxWidth: '100%',
+  width: '100%',
   margin: 0,
   padding: 0,
   position: 'relative',
@@ -65,7 +65,7 @@ const carouselBody = {
   padding: 0,
   maxWidth: '100%',
   overflowX: 'scroll',
-  overflow: 'hide',
+  overflow: 'auto',
   display: 'flex',
   scrollBehavior: 'smooth',
 };
@@ -155,10 +155,6 @@ const reviewBorder = {
   padding: '0 10px',
 };
 
-const suggestion = {
-  width: '936px',
-};
-
 const tooltipBody = {
   display: 'flex',
   width: '300px',
@@ -180,7 +176,6 @@ const tooltipBodyActive = {
   visibility: 'visible',
   boxShadow: '0 3px 6px rgba(0,0,0,.1)',
 };
-
 
 export default {
   span,
@@ -204,5 +199,4 @@ export default {
   card,
   cardImage,
   cardInfo,
-  suggestion,
 };
