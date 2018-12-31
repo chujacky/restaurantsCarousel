@@ -10,6 +10,13 @@ const RestaurantEntry = (props) => {
         <div style={styles.cardImage}>
           <img width="255" src={props.restaurant.picture} />
         </div>
+        <div style={styles.bookmark}>
+          <button type="button" style={styles.bookmarkButton}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="3 -2 32 32" width="26px" height="26px">
+              <path d="M25,27l-9-6.75L7,27V4h18V27z" fill="#b1b4b5" />
+            </svg>
+          </button>
+        </div>
         <div style={styles.cardInfo}>
           <h3 style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
           <div style={Object.assign({}, styles.listInfoLeft, { marginBottom: '10px' })}>
