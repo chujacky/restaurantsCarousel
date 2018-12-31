@@ -85,10 +85,6 @@ class Suggestions extends React.Component {
     });
   }
 
-  bookmark(id) {
-    
-  }
-
   render() {
     return (
       <SuggestionContainer>
