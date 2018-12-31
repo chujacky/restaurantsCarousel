@@ -12,6 +12,7 @@ const card = {
   fontSize: '12px',
   fontFamily: "'Nunito Sans', sans-serif",
   color: 'rgba(0,0,0,.55)',
+  position:'relative',
 };
 
 const cardImage = {
@@ -177,6 +178,21 @@ const tooltipBodyActive = {
   boxShadow: '0 3px 6px rgba(0,0,0,.1)',
 };
 
+const bookmarkButton = {
+  borderRadius: '50%',
+  height: '36px',
+  width: '36px',
+  border: 'none',
+  boxShadow: '0 3px 6px rgba(0,0,0,.1)',
+};
+
+const bookmark = {
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  padding: '12px 16px',
+};
+
 export default {
   span,
   listEntry,
@@ -199,4 +215,6 @@ export default {
   card,
   cardImage,
   cardInfo,
+  bookmarkButton,
+  bookmark,
 };
