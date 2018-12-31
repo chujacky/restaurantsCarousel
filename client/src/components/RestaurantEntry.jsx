@@ -8,7 +8,9 @@ const RestaurantEntry = (props) => {
     <div className="restaurantCard" style={styles.listEntry}>
       <div style={styles.card}>
         <div style={styles.cardImage}>
-          <img width="255" src={props.restaurant.picture} />
+          <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
+            <img width="255" src={props.restaurant.picture} />
+          </a>
         </div>
         <div style={styles.bookmark}>
           <button type="button" style={styles.bookmarkButton}>
@@ -17,25 +19,28 @@ const RestaurantEntry = (props) => {
             </svg>
           </button>
         </div>
-        <div style={styles.cardInfo}>
-          <h3 style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
-          <div style={Object.assign({}, styles.listInfoLeft, { marginBottom: '10px' })}>
-            <span>{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>
-          </div>
-          <div style={styles.lowerRow}>
-            <div>
-              <span>
-                <div style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime} mins</div>
-                <div>${props.restaurant.minimum} min</div>
-              </span>
+        <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
+          <div style={styles.cardInfo}>
+            <h3 style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
+            <div style={Object.assign({}, styles.listInfoLeft, { marginBottom: '10px' })}>
+              <span>{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>
             </div>
-            <div onMouseEnter={() => props.hoverIn(props.restaurant.id, props.index)} onMouseLeave={props.hoverOut}>
-              <Stars stars={props.restaurant.reviewSummary.stars}/>
-              <div>{props.restaurant.reviewNo} ratings</div>
+            <div style={styles.lowerRow}>
+              <div>
+                <span>
+                  <div style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime} mins</div>
+                  <div>${props.restaurant.minimum} min</div>
+                </span>
+              </div>
+              <div onMouseEnter={() => props.hoverIn(props.restaurant.id, props.index)} onMouseLeave={props.hoverOut}>
+                <Stars stars={props.restaurant.reviewSummary.stars}/>
+                <div>{props.restaurant.reviewNo} ratings</div>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
+      
     </div>
   );
 };

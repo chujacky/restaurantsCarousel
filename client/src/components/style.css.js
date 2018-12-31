@@ -10,8 +10,6 @@ const card = {
   width: '100%',
   padding: 0,
   fontSize: '12px',
-  fontFamily: "'Nunito Sans', sans-serif",
-  color: 'rgba(0,0,0,.55)',
   position:'relative',
 };
 
@@ -30,6 +28,8 @@ const cardInfo = {
   textOverflow: 'ellipsis',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
+  fontFamily: "'Nunito Sans', sans-serif",
+  color: 'rgba(0,0,0,.55)',
 };
 
 const title = {
