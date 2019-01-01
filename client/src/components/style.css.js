@@ -33,19 +33,10 @@ const cardInfo = {
 };
 
 const title = {
-  color: 'black',
+  color: 'rgba(0,0,0,.87)',
   fontSize: '16px',
   paddingBottom: '10px',
   margin: 0,
-};
-
-const listEntry = {
-  padding: '0 20px',
-  height: 'auto',
-  width: 'auto',
-  boxSizing: 'border-box',
-  maxWidth: '33%',
-  flex: '1 0 33%',
 };
 
 const ellipsis = {
@@ -59,16 +50,6 @@ const carousel = {
   margin: 0,
   padding: 0,
   position: 'relative',
-};
-
-const carouselBody = {
-  margin: 0,
-  padding: 0,
-  maxWidth: '100%',
-  overflowX: 'scroll',
-  overflow: 'auto',
-  display: 'flex',
-  scrollBehavior: 'smooth',
 };
 
 const lowerRow = {
@@ -119,7 +100,7 @@ const reviewSummary = {
   display: 'flex',
   justifyContent: 'center',
   textAlign: 'center',
-  fontSize: '12px',
+  fontSize: '14px',
   color: 'rgba(0, 0, 0, 0.55)',
 };
 
@@ -134,7 +115,7 @@ const review = {
 
 const reviewContent = {
   width: '80%',
-  color: 'black',
+  color: 'rgba(0,0,0,.87)',
   fontSize: '14px',
 };
 
@@ -195,11 +176,9 @@ const bookmark = {
 
 export default {
   span,
-  listEntry,
   stars,
   lowerRow,
   carousel,
-  carouselBody,
   avatar,
   rightArrow,
   leftArrow,

@@ -2,11 +2,26 @@ import React from 'react';
 import Stars from './Stars.jsx';
 import Bookmark from './Bookmark.jsx';
 import styles from './style.css.js';
+import styled from 'styled-components';
+
+const Card = styled.div`
+  padding: 0 20px;
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+  max-width: 33%;
+  flex: 1 0 33%;
+  
+  @media screen and (max-width: 740px) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+`;
 
 
 const RestaurantEntry = (props) => {
   return (
-    <div className="restaurantCard" style={styles.listEntry}>
+    <Card className="restaurantCard">
       <div style={styles.card}>
         <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
           <div style={styles.cardImage}>
@@ -37,7 +52,7 @@ const RestaurantEntry = (props) => {
           </div>
         </a>
       </div> 
-    </div>
+    </Card>
   );
 };
 

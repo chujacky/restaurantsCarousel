@@ -6,23 +6,16 @@ import styled from 'styled-components';
 import styles from './style.css.js'
 
 const SuggestionContainer = styled.div`
-
-  @media screen and (min-width: 1200px) {
-    width: 1140px;
-    max-width: 100%;
-  }
-
-  @media (min-width: 992px) and (max-width: 1200px) {
-    width: 960px;
-    max-width: 100%;
-  }
-
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media screen and (min-width: 768px) {
     width: 720px;
-    max-width: 100%;
+    max-width: 85%;
   }
+  
+  @media screen and (min-width: 992px) {
+    width: 960px;
+    max-width: 85%;
+  }  
 `;
-
 
 class Suggestions extends React.Component {
   constructor(props) {
@@ -33,6 +26,7 @@ class Suggestions extends React.Component {
       active: 0,
       hover: 0,
       position: [0, 0],
+      width: 960,
     };
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
@@ -58,7 +52,7 @@ class Suggestions extends React.Component {
     this.setState({
       active,
     });
-    this.scroller.current.scrollLeft += 924;
+    this.scroller.current.scrollLeft += this.scroller.current.offsetWidth - 10;
   }
 
   back() {
@@ -66,11 +60,11 @@ class Suggestions extends React.Component {
     this.setState({
       active,
     });
-    this.scroller.current.scrollLeft -= 924;
+    this.scroller.current.scrollLeft -= this.scroller.current.offsetWidth - 10;
   }
 
   hoverIn(id, index) {
-    const position = [100 + 308 * index, 300];
+    const position = [100 + 316 * index, 300];
     this.setState({
       hover: id,
       position,
@@ -78,7 +72,6 @@ class Suggestions extends React.Component {
   }
 
   hoverOut() {
-    console.log('out');
     this.setState({
       hover: 0,
       position: [0, 0],
@@ -87,15 +80,15 @@ class Suggestions extends React.Component {
 
   render() {
     return (
-      <SuggestionContainer>
-        <div>
-          <h3 style={ {padding: '0 20px'} }>Sponsored restaurants in your area</h3>
-        </div>
-        <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
-        active={this.state.active} hoverIn={this.hoverIn}
-        hoverOut={this.hoverOut} scroll={this.scroller} />
-        <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
-      </SuggestionContainer>
+        <SuggestionContainer>
+          <div>
+            <h3 style={ {padding: '0 20px'} }>Sponsored restaurants in your area</h3>
+          </div>
+          <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
+          active={this.state.active} hoverIn={this.hoverIn}
+          hoverOut={this.hoverOut} scroll={this.scroller} />
+          <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
+        </SuggestionContainer>
     );
   }
 }
