@@ -69,11 +69,11 @@ class Suggestions extends React.Component {
 
     if (this.scroller.current.scrollLeft > 0) {
       this.setState({
-        buttonPrev: true, 
+        buttonPrev: true,
       });
     } else {
       this.setState({
-        buttonPrev: false,   
+        buttonPrev: false,
       });
     }
   }

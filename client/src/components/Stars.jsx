@@ -1,14 +1,13 @@
 import React from 'react';
-import StarsEntry from './StarsEntry.jsx';
+import GreyStars from './GreyStars.jsx';
+import OrangeStars from './OrangeStars.jsx';
 import styles from './style.css.js';
 
-const Stars = () => {
-  let stars = [1, 1, 1, 1, 1];
+const Stars = (props) => {
   return (
     <div style={styles.stars} >
-      {stars.map((star) => {
-      return <StarsEntry star={star} />;
-      })}
+      <GreyStars />
+      <OrangeStars stars={props.stars}/>
     </div>
   );
 };

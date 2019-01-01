@@ -40,7 +40,7 @@ const RestaurantEntry = (props) => {
             <div style={styles.lowerRow}>
               <div>
                 <span>
-                  <div style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime} mins</div>
+                  <div style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime}-{props.restaurant.waitingTime + 10} mins</div>
                   <div>${props.restaurant.minimum} min</div>
                 </span>
               </div>
