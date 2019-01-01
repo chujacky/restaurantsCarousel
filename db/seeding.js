@@ -32,7 +32,7 @@ for (let i = 1; i < 101; i += 1) {
     minimum: faker.random.number(15),
     reviewNo: faker.random.number(2000),
     reviewSummary: {
-      stars: faker.random.number(5),
+      stars: faker.random.number(100),
       good: faker.random.number(100),
       onTime: faker.random.number({
         min: 60,
