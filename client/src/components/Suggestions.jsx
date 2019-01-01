@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import styles from './style.css.js'
 
 const SuggestionContainer = styled.div`
-
   @media screen and (min-width: 768px) {
     width: 720px;
     max-width: 85%;
@@ -16,7 +15,6 @@ const SuggestionContainer = styled.div`
     width: 960px;
     max-width: 85%;
   }  
-
 `;
 
 class Suggestions extends React.Component {
