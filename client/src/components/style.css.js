@@ -176,7 +176,6 @@ const bookmark = {
 
 export default {
   span,
-  listEntry,
   stars,
   lowerRow,
   carousel,

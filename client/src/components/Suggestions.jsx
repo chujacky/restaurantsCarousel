@@ -37,8 +37,6 @@ class Suggestions extends React.Component {
   }
 
   componentDidMount() {
-    this.updateWidth();
-    window.addEventListener("resize", this.updateWidth.bind(this));
     axios.get(`/restaurants/${this.props.id}/suggestions`)
       .then((response) => {
         const data = response.data.map(restaurant => restaurant[0]);
@@ -51,28 +49,12 @@ class Suggestions extends React.Component {
       });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWidth.bind(this));
-  }
-
-  updateWidth() {
-    if (window.innerWidth < 768) {
-      this.setState({
-        width: 710,
-      })
-    } else {
-      this.setState({
-        width: 950,
-      });
-    }
-  }
-
   next() {
     const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
     this.setState({
       active,
     });
-    this.scroller.current.scrollLeft += this.state.width;
+    this.scroller.current.scrollLeft += this.scroller.current.offsetWidth - 10;
   }
 
   back() {
@@ -80,7 +62,7 @@ class Suggestions extends React.Component {
     this.setState({
       active,
     });
-    this.scroller.current.scrollLeft -= this.state.width;
+    this.scroller.current.scrollLeft -= this.scroller.current.offsetWidth - 10;
   }
 
   hoverIn(id, index) {
