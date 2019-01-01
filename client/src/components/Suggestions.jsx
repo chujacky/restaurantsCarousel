@@ -74,7 +74,7 @@ class Suggestions extends React.Component {
     this.setState({
       hover: id,
       position,
-    })
+    });
   }
 
   hoverOut() {
