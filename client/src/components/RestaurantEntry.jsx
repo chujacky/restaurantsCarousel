@@ -35,7 +35,7 @@ const RestaurantEntry = (props) => {
           <div style={styles.cardInfo}>
             <h3 style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
             <div style={Object.assign({}, styles.listInfoLeft, { marginBottom: '10px' })}>
-              <span>{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>
+              <span>{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>        
             </div>
             <div style={styles.lowerRow}>
               <div>

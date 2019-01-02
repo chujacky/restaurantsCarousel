@@ -15,6 +15,8 @@ const SuggestionContainer = styled.div`
     width: 960px;
     max-width: 85%;
   }  
+
+  font-family: 'Muli', sans-serif;
 `;
 
 class Suggestions extends React.Component {
