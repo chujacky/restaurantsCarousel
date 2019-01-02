@@ -23,15 +23,16 @@ class Suggestions extends React.Component {
     this.scroller = React.createRef();
     this.state = {
       restaurants: [],
-      active: 0,
+      buttonNext: true,
+      buttonPrev: false,
       hover: 0,
       position: [0, 0],
-      width: 960,
     };
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
     this.hoverIn = this.hoverIn.bind(this);
     this.hoverOut = this.hoverOut.bind(this);
+    this.scroll = this.scroll.bind(this);
   }
 
   componentDidMount() {
@@ -48,19 +49,33 @@ class Suggestions extends React.Component {
   }
 
   next() {
-    const active = this.state.active === 3 ? this.state.active : this.state.active + 1;
-    this.setState({
-      active,
-    });
     this.scroller.current.scrollLeft += this.scroller.current.offsetWidth - 10;
   }
 
   back() {
-    const active = this.state.active === 0 ? this.state.active : this.state.active - 1;
-    this.setState({
-      active,
-    });
     this.scroller.current.scrollLeft -= this.scroller.current.offsetWidth - 10;
+  }
+
+  scroll() {
+    if (this.scroller.current.scrollLeft < this.scroller.current.scrollWidth - this.scroller.current.clientWidth) {
+      this.setState({
+        buttonNext: true,
+      });
+    } else {
+      this.setState({
+        buttonNext: false,
+      });
+    }
+
+    if (this.scroller.current.scrollLeft > 0) {
+      this.setState({
+        buttonPrev: true,
+      });
+    } else {
+      this.setState({
+        buttonPrev: false,
+      });
+    }
   }
 
   hoverIn(id, index) {
@@ -85,8 +100,8 @@ class Suggestions extends React.Component {
             <h3 style={ {padding: '0 20px'} }>Sponsored restaurants in your area</h3>
           </div>
           <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
-          active={this.state.active} hoverIn={this.hoverIn}
-          hoverOut={this.hoverOut} scroll={this.scroller} />
+          buttonNext={this.state.buttonNext} buttonPrev={this.state.buttonPrev} hoverIn={this.hoverIn}
+          hoverOut={this.hoverOut} scroll={this.scroller} scrolling={this.scroll} />
           <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
         </SuggestionContainer>
     );

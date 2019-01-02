@@ -20,15 +20,15 @@ const CarouselBody = styled.div`
 const Carousel = (props) =>  {
   return (
     <div className="carousel" style={styles.carousel}>
-      {props.active === 0
+      {props.buttonPrev === false
         ? null
         : <div style={styles.leftArrow} onClick={props.back} id="prevButton" >&lt;</div>
       }
-      {props.active === 3
+      {props.buttonNext === false
         ? null
         : <div style={styles.rightArrow} onClick={props.next} id="nextButton" >&gt;</div>
       }
-      <CarouselBody className="carouselBody" ref={props.scroll}>
+      <CarouselBody className="carouselBody" ref={props.scroll} onScroll={props.scrolling}>
         {props.restaurants.map((restaurant, index) => {
           return (
             <RestaurantEntry restaurant={restaurant} active={props.active} index={index % 3}

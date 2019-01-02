@@ -1,7 +1,7 @@
-const span = {
-  color: 'orange',
-  marginBottom: '2px',
-  marginRight: '2px',
+const orangeStars = {
+  position: 'absolute',
+  top: 0,
+  overflow: 'hidden',
 };
 
 const card = {
@@ -58,8 +58,8 @@ const lowerRow = {
 };
 
 const stars = {
-  display: 'flex',
-  flexDirection: 'row',
+  position: 'relative',
+  marginBottom: '1px'
 };
 
 const rightArrow = {
@@ -175,7 +175,7 @@ const bookmark = {
 };
 
 export default {
-  span,
+  orangeStars,
   stars,
   lowerRow,
   carousel,
