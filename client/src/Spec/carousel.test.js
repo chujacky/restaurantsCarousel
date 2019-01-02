@@ -1,8 +1,8 @@
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Carousel from './Carousel.jsx';
-import RestaurantEntry from './RestaurantEntry.jsx';
+import Carousel from '../components/Carousel.jsx';
+import RestaurantEntry from '../components/RestaurantEntry.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 

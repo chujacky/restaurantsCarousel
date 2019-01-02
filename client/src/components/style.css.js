@@ -1,6 +1,7 @@
 const orangeStars = {
   position: 'absolute',
   top: 0,
+  left: 0,
   overflow: 'hidden',
 };
 
@@ -10,7 +11,7 @@ const card = {
   width: '100%',
   padding: 0,
   fontSize: '12px',
-  position:'relative',
+  position: 'relative',
 };
 
 const cardImage = {
@@ -30,6 +31,7 @@ const cardInfo = {
   overflow: 'hidden',
   fontFamily: "'Nunito Sans', sans-serif",
   color: 'rgba(0,0,0,.55)',
+  fontSize: '12px',
 };
 
 const title = {
@@ -37,6 +39,7 @@ const title = {
   fontSize: '16px',
   paddingBottom: '10px',
   margin: 0,
+  fontFamily: "'Muli', sans-serif",
 };
 
 const ellipsis = {
@@ -107,14 +110,15 @@ const reviewSummary = {
 const review = {
   display: 'flex',
   fontFamily: "'Nunito Sans', sans-serif",
-  padding: '20px 0',
+  paddingTop: '10px',
+  paddingBottom: '20px',
   borderBottom: '2px solid rgba(0,0,0,.2)',
   justifyContent: 'flex-start',
   width: '100%',
 };
 
 const reviewContent = {
-  width: '80%',
+  maxWidth: '75%',
   color: 'rgba(0,0,0,.87)',
   fontSize: '14px',
 };
@@ -126,7 +130,8 @@ const avatar = {
   backgroundColor: '#40c2de',
   textAlign: 'center',
   lineHeight: '40px',
-  margin: '20px 10px',
+  marginLeft: '18px',
+  marginRight: '10px',
   color: 'white',
 };
 
@@ -147,10 +152,13 @@ const tooltipBody = {
   backgroundColor: 'white',
   visibility: 'collapse',
   border: '1px solid rgba(0,0,0,.1)',
+  fontFamily: "'Nunito Sans', sans-serif",
 };
 
 const tooltipLink = {
   color: '#0070eb',
+  textDecoration: 'none',
+  fontSize: '15px',
 };
 
 const tooltipBodyActive = {

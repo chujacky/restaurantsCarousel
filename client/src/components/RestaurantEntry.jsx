@@ -25,7 +25,7 @@ const RestaurantEntry = (props) => {
       <div style={styles.card}>
         <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
           <div style={styles.cardImage}>
-            <img width="255" src={props.restaurant.picture} />
+            <img className="restaurantPic" width="255" src={props.restaurant.picture} />
           </div>
         </a>
         <div style={styles.bookmark}>
@@ -33,20 +33,20 @@ const RestaurantEntry = (props) => {
         </div>
         <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
           <div style={styles.cardInfo}>
-            <h3 style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
+            <h3 className="name" style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
             <div style={Object.assign({}, styles.listInfoLeft, { marginBottom: '10px' })}>
-              <span>{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>
+              <span className="cuisine">{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>        
             </div>
             <div style={styles.lowerRow}>
               <div>
                 <span>
-                  <div style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime}-{props.restaurant.waitingTime + 10} mins</div>
-                  <div>${props.restaurant.minimum} min</div>
+                  <div className="waitingTime" style={{ color: 'black', margin: '2px 0' }}>{props.restaurant.waitingTime}-{props.restaurant.waitingTime + 10} mins</div>
+                  <div className="minOrder">${props.restaurant.minimum} min</div>
                 </span>
               </div>
               <div onMouseEnter={() => props.hoverIn(props.restaurant.id, props.index)} onMouseLeave={props.hoverOut}>
                 <Stars stars={props.restaurant.reviewSummary.stars}/>
-                <div>{props.restaurant.reviewNo} ratings</div>
+                <div className="reviewNos">{props.restaurant.reviewNo} ratings</div>
               </div>
             </div>
           </div>

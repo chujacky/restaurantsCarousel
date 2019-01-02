@@ -37,7 +37,7 @@ const Tooltip = (props) => {
       <div className="review" style={styles.review}>
         <div className="avatar" style={styles.avatar}>{props.restaurant.review.username[0]}</div>
         <div style={styles.reviewContent}>
-          <h4>{props.restaurant.review.username}</h4>
+          <h4 style={{margin: '10px 0'}}>{props.restaurant.review.username}:</h4>
           <div>{props.restaurant.review.review}</div>
         </div>
       </div>

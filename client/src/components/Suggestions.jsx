@@ -15,6 +15,8 @@ const SuggestionContainer = styled.div`
     width: 960px;
     max-width: 85%;
   }  
+
+  font-family: 'Muli', sans-serif;
 `;
 
 class Suggestions extends React.Component {
@@ -39,6 +41,7 @@ class Suggestions extends React.Component {
     axios.get(`/restaurants/${this.props.id}/suggestions`)
       .then((response) => {
         const data = response.data.map(restaurant => restaurant[0]);
+        console.log(data[0]);
         this.setState({
           restaurants: data,
         });
