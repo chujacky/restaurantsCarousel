@@ -1,9 +1,9 @@
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Suggestions from './Suggestions.jsx';
-import Carousel from './Carousel.jsx';
-import TooltipList from './TooltipList.jsx'
+import Suggestions from '../components/Suggestions.jsx';
+import Carousel from '../components/Carousel.jsx';
+import TooltipList from '../components/TooltipList.jsx'
 
 Enzyme.configure({ adapter: new Adapter() });
 
