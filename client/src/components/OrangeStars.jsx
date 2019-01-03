@@ -10,7 +10,6 @@ const OrangeStar = styled.span`
 
 const OrangeStars = (props) => {
   const width = Math.ceil(props.stars / 10) * 10;
-  console.log(width);
   const style = {
     width: `${width}%`
   };

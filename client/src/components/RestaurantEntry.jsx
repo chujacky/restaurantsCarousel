@@ -24,15 +24,15 @@ const RestaurantEntry = (props) => {
     <Card className="restaurantCard">
       <div style={styles.card}>
         <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
-          <div style={styles.cardImage}>
+          <div style={styles.cardImage} onMouseEnter={props.hoverOut}>
             <img className="restaurantPic" width="255" src={props.restaurant.picture} />
           </div>
         </a>
         <div style={styles.bookmark}>
           <Bookmark bookmarked={props.restaurant.bookmarked}/>
-        </div>
+        </div >
         <a href={`/restaurants/${props.restaurant.id}`} style={{ textDecoration: 'none' }}>
-          <div style={styles.cardInfo}>
+          <div style={styles.cardInfo} onMouseEnter={props.hoverOut}>
             <h3 className="name" style={Object.assign({}, styles.listInfoLeft, styles.title, styles.ellipsis)}>{props.restaurant.name}</h3>
             <div style={Object.assign({}, styles.listInfoLeft, { marginBottom: '10px' })}>
               <span className="cuisine">{props.restaurant.food.split(' ').slice(0, 2).join(', ').concat('...')}</span>        
@@ -44,7 +44,7 @@ const RestaurantEntry = (props) => {
                   <div className="minOrder">${props.restaurant.minimum} min</div>
                 </span>
               </div>
-              <div onMouseEnter={() => props.hoverIn(props.restaurant.id, props.index)} onMouseLeave={props.hoverOut}>
+              <div onMouseEnter={(e) => props.hoverIn(props.restaurant.id, e)}>
                 <Stars stars={props.restaurant.reviewSummary.stars}/>
                 <div className="reviewNos">{props.restaurant.reviewNo} ratings</div>
               </div>

@@ -81,8 +81,9 @@ class Suggestions extends React.Component {
     }
   }
 
-  hoverIn(id, index) {
-    const position = [100 + 316 * index, 300];
+  hoverIn(id, e) {
+    console.log(e.target.getBoundingClientRect().left);
+    const position = [e.target.getBoundingClientRect().left - 120, 305];
     this.setState({
       hover: id,
       position,
