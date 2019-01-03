@@ -153,6 +153,7 @@ const tooltipBody = {
   visibility: 'collapse',
   border: '1px solid rgba(0,0,0,.1)',
   fontFamily: "'Nunito Sans', sans-serif",
+  borderRadius: '5px',
 };
 
 const tooltipLink = {
