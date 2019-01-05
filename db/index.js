@@ -1,7 +1,14 @@
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
+// mongodb://localhost/grubhub
+mongoose.connect('mongodb://172.17.0.2/test', {useNewUrlParser: true});
 
-mongoose.connect('mongodb://localhost/grubhub', {useNewUrlParser: true});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () =>  {
+  // we're connected!
+  console.log('connected');
+});
 
 const suggestionSchema = new mongoose.Schema({
   id: Number,
