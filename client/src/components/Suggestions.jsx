@@ -2,22 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Carousel from './Carousel.jsx';
 import TooltipList from './TooltipList.jsx';
-import styled from 'styled-components';
-import styles from './style.css.js'
-
-const SuggestionContainer = styled.div`
-  @media screen and (min-width: 768px) {
-    width: 720px;
-    max-width: 85%;
-  }
-  
-  @media screen and (min-width: 992px) {
-    width: 960px;
-    max-width: 85%;
-  }  
-
-  font-family: 'Muli', sans-serif;
-`;
 
 class Suggestions extends React.Component {
   constructor(props) {
@@ -82,7 +66,7 @@ class Suggestions extends React.Component {
   }
 
   hoverIn(id, e) {
-    const position = [e.target.getBoundingClientRect().left - 120, 305];
+    const position = [e.target.getBoundingClientRect().left - 120, 290];
     this.setState({
       hover: id,
       position,
@@ -98,15 +82,15 @@ class Suggestions extends React.Component {
 
   render() {
     return (
-        <SuggestionContainer>
-          <div>
-            <h3 style={ {padding: '0 20px'} }>Sponsored restaurants in your area</h3>
-          </div>
-          <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
-          buttonNext={this.state.buttonNext} buttonPrev={this.state.buttonPrev} hoverIn={this.hoverIn}
-          hoverOut={this.hoverOut} scroll={this.scroller} scrolling={this.scroll} />
-          <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
-        </SuggestionContainer>
+      <div className="suggestionsContainer">
+        <div>
+          <h3 style={ {padding: '0 20px'} }>Sponsored restaurants in your area</h3>
+        </div>
+        <Carousel restaurants={this.state.restaurants} next={this.next} back={this.back}
+        buttonNext={this.state.buttonNext} buttonPrev={this.state.buttonPrev} hoverIn={this.hoverIn}
+        hoverOut={this.hoverOut} scroll={this.scroller} scrolling={this.scroll} />
+        <TooltipList restaurants={this.state.restaurants} hover={this.state.hover} position={this.state.position} />
+      </div>
     );
   }
 }

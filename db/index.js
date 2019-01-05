@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
 
-mongoose.connect('mongodb://localhost/grubhub');
+mongoose.connect('mongodb://localhost/grubhub', {useNewUrlParser: true});
 
 const suggestionSchema = new mongoose.Schema({
   id: Number,
