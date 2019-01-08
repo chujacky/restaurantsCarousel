@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "react-dev": "webpack -d --watch",
+    "react-dev": "webpack -d --watch --mode production",
     "seed": "node db/seeding.js",
     "test": "jest",
     "docker": "node db/seeding.js && node server/index.js"
