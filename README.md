@@ -1,6 +1,7 @@
-# Project Name
+# Restaurants Carousel
 
-> Restaurants Carousel
+> 
+This is a front-end recreation of the restuarant recommendation component on Grubhub, designed to maintain all original functionality and mimic the style from the original component.
 
 ## Table of Contents
 
@@ -19,8 +20,6 @@
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
-
-## Development
 
 ### Installing Dependencies
 
