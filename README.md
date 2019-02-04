@@ -1,7 +1,6 @@
 # Restaurants Carousel
 
-> 
-This is a front-end recreation of the restuarant recommendation component on Grubhub, designed to maintain all original functionality and mimic the style from the original component.
+> This is a front-end recreation of the restuarant recommendation component on Grubhub, designed to maintain all original functionality and mimic the style from the original component.
 
 ## Table of Contents
 
